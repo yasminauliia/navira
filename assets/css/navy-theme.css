@@ -1,0 +1,51 @@
+/* ════ NAVIRA — Theme #1E2E4F ════ */
+
+:root {
+    --navy-900: #1E2E4F;
+    --navy-800: #1E2E4F;
+    --navy-700: #273a5c;
+    --navy-600: #324872;
+    --navy-overlay-top: rgba(30, 46, 79, 0.35);
+    --navy-overlay-bottom: rgba(30, 46, 79, 0.88);
+    --navy-navbar: rgba(30, 46, 79, 0.92);
+    --navy-topbar: rgba(30, 46, 79, 0.95);
+}
+
+.bg-navy {
+    background: linear-gradient(135deg, var(--navy-900), var(--navy-700), var(--navy-600));
+    background-attachment: fixed;
+}
+
+.bg-navy-animated {
+    background: linear-gradient(-45deg, var(--navy-900), var(--navy-700), var(--navy-600), var(--navy-800));
+    background-size: 400% 400%;
+    animation: navy-bg-move 10s ease infinite;
+}
+
+@keyframes navy-bg-move {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.video-overlay {
+    background: linear-gradient(to bottom, var(--navy-overlay-top), var(--navy-overlay-bottom));
+}
+
+.navy-topbar {
+    background: var(--navy-topbar);
+    backdrop-filter: blur(14px);
+}
+
+.navy-footer {
+    background: var(--navy-900);
+}
+
+.pay-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}

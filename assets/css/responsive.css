@@ -1,0 +1,113 @@
+/* ════ NAVIRA — Shared Mobile Responsive ════ */
+
+.mobile-header {
+    display: none;
+}
+
+.sidebar-overlay {
+    display: none;
+}
+
+.menu-toggle {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.mobile-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+}
+
+.mobile-brand img {
+    height: 32px;
+    width: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.mobile-brand span {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1.5px;
+    white-space: nowrap;
+}
+
+.tbl-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 768px) {
+    .mobile-header {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 56px;
+        background: #020617;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        align-items: center;
+        padding: 0 14px;
+        z-index: 1100;
+        gap: 12px;
+    }
+
+    .sidebar-overlay.show {
+        display: block;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.65);
+        z-index: 999;
+    }
+
+    body.has-mobile-nav .sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+    }
+
+    body.has-mobile-nav .sidebar.open {
+        transform: translateX(0);
+    }
+
+    body.nav-open {
+        overflow: hidden;
+    }
+
+    body.has-mobile-nav .main-wrap,
+    body.has-mobile-nav .content {
+        margin-left: 0 !important;
+        padding-top: 72px;
+    }
+
+    .topbar-right {
+        flex-wrap: wrap;
+    }
+
+    .toolbar {
+        flex-direction: column;
+        align-items: stretch !important;
+    }
+
+    .toolbar .search-wrap input {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .mobile-brand span {
+        font-size: 16px;
+    }
+}

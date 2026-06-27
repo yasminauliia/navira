@@ -1,0 +1,167 @@
+/* ════ NAVIRA — Shared Sidebar (Admin-style) ════ */
+
+.sidebar {
+    width: 240px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #020617;
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 24px 16px;
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 4px 8px;
+    margin-bottom: 28px;
+}
+
+.sidebar-logo .brand-logo {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.sidebar-logo .logo-text {
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    line-height: 1.2;
+    letter-spacing: 1.5px;
+}
+
+.sidebar-logo .logo-sub {
+    font-size: 10px;
+    color: #475569;
+    font-weight: 500;
+}
+
+.sidebar-section {
+    font-size: 9px;
+    font-weight: 700;
+    color: #334155;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    padding: 0 8px;
+    margin: 16px 0 8px;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 12px;
+    margin-bottom: 3px;
+    border-radius: 11px;
+    text-decoration: none;
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.sidebar a .nav-icon {
+    font-size: 16px;
+    width: 30px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.sidebar a:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: #94a3b8;
+}
+
+.sidebar a.active {
+    background: linear-gradient(90deg, rgba(37, 99, 235, 0.3), rgba(56, 189, 248, 0.15));
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    color: white;
+    box-shadow: 0 0 16px rgba(56, 189, 248, 0.1);
+}
+
+.sidebar a.active .nav-icon {
+    color: #38bdf8;
+}
+
+.sidebar a.btn-beli-nav {
+    background: linear-gradient(90deg, rgba(14, 165, 233, 0.25), rgba(56, 189, 248, 0.15));
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    color: #38bdf8;
+    font-weight: 600;
+}
+
+.sidebar a.btn-beli-nav:hover {
+    background: linear-gradient(90deg, rgba(14, 165, 233, 0.35), rgba(56, 189, 248, 0.25));
+    color: white;
+}
+
+.sidebar-spacer {
+    flex: 1;
+}
+
+.sidebar-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 14px;
+}
+
+.sidebar-footer .user-info {
+    font-size: 11px;
+    color: #334155;
+    padding: 0 4px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.sidebar-footer .user-info strong {
+    color: #64748b;
+}
+
+.sidebar-footer a {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    color: #f87171;
+    border-radius: 11px;
+    padding: 11px 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s;
+    margin-bottom: 0;
+}
+
+.sidebar-footer a:hover {
+    background: rgba(239, 68, 68, 0.18);
+    color: #fca5a5;
+}
+
+.online-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #22c55e;
+    margin-left: auto;
+    box-shadow: 0 0 6px #22c55e;
+    animation: sidebar-blink 2s ease infinite;
+    flex-shrink: 0;
+}
+
+@keyframes sidebar-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+
+.main-wrap {
+    margin-left: 240px;
+    padding: 28px;
+    min-height: 100vh;
+}

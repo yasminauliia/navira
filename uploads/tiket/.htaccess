@@ -1,0 +1,8 @@
+# Izinkan akses publik ke file PDF tiket
+<IfModule mod_authz_core.c>
+    Require all granted
+</IfModule>
+
+<FilesMatch "\.pdf$">
+    Header set Content-Type "application/pdf"
+</FilesMatch>
